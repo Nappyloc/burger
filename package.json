@@ -1,0 +1,25 @@
+{
+  "name": "burger",
+  "version": "1.0.0",
+  "description": "week_14_handlebars",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nappyloc/burger.git"
+  },
+  "author": "Dania King",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Nappyloc/burger/issues"
+  },
+  "homepage": "https://github.com/Nappyloc/burger#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-handlebars": "^4.0.3",
+    "mysql": "^2.18.1"
+  }
+}
