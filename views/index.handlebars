@@ -9,20 +9,20 @@
                 {{#each burgers_info}}
                 {{#unless this.devoured}}
                 <div class="col-9 text-center">
-                    <pre>{{this.id}}. {{this.burger_name}}</pre>
-                </div>
-                <div class="col-3 text center">
-                    <form method="POST" action="/burgers/update?_method=PUT" class="button-size">
-                        <input type="hidden" name="burger_id" type="text" value="{{this.id}}">
-                        <button type="submit" class="btn btn-default"> Eat Burger!</button>
-                    </form>
-
+                    <pre>{{this.id}}. {{this.burger_name}} <button type="submit" class="btn btn-default" id="eat" data-id="{{this.id}}"> Eat Burger!</button></pre>
                 </div>
                 {{/unless}}
                 {{/each}}
 
             </div>
 
+        </div>
+        <div class="col-6 text-center">
+            {{#each burgers_info}}
+            {{#if this.devoured}}
+            <input class="form-control" type="text" placeholder="{{this.id}}. {{this.burger_name}}" readonly>
+            {{/if}}
+            {{/each}}
         </div>
 
     </div>

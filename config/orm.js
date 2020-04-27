@@ -1,14 +1,30 @@
 // Import MySQL connection.
 var connection = require( "../config/connection.js" );
 
-// Data Object
+// SQL Statement Object
 var orm = {
-    all: function ( tableInput, cb )
+    // Return all tables from the database
+    all: function ( table, cb )
     {
-        connection.query( "SELECT * FROM " + tableInput + ";", function ( err, res )
+        // query string to select all from the passed table
+        var query = "SELECT * FROM " + table + ";"
+        connection.query( query, function ( err, res )
         {
             if ( err ) throw err;
             cb( res )
+        } )
+    },
+
+
+
+    eat: function ( table, condition, cb )
+    {
+        var query = "UPDATE " + table + " SET devoured=true WHERE id= " + condition + ";"
+        console.log( query )
+        connection.query( query, function ( err, result )
+        {
+            if ( err ) throw err;
+            cb( result )
         } )
     }
 }

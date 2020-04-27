@@ -5,7 +5,12 @@ var burgers = {
         orm.all('burgers', function(res) {
             cb(res)
         })
+    },
+
+    eat: function(id,cb) {
+        orm.eat("burgers", id, cb);
     }
+    
 }
 
 
