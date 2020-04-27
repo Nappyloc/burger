@@ -26,6 +26,18 @@ var orm = {
             if ( err ) throw err;
             cb( result )
         } )
+    },
+
+
+    add: function ( table, condition, cb )
+    {
+        var query = 'INSERT INTO ' + table + ' (burger_name) VALUES ("' + condition + '");'
+        console.log( query )
+        connection.query( query, function ( err, result )
+        {
+            if ( err ) throw err;
+            cb( result )
+        } )
     }
 }
 
