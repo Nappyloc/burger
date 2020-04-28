@@ -1,5 +1,7 @@
+// require ORM functions
 var orm = require( '../config/orm' )
 
+// create the burger model to use with the controller
 var burgers = {
     all: function ( cb )
     {
