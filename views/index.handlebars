@@ -5,7 +5,7 @@
 
         </div>
         <div class="col-6 text-center">
-            <div class="row">
+            <div class="row uneaten">
                 {{#each burgers_info}}
                 {{#unless this.devoured}}
                 <div class="col-9 text-center">
@@ -27,7 +27,7 @@
 
     </div>
     <div class="row" id="addburger">
-        <div class="col-6 text-center">
+        <div class="col-9 text-center">
             <form class="create">
                 <div class="form-group">
                     <label for="burgerName">Burger Name: </label>

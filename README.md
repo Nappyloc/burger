@@ -14,5 +14,5 @@ Week 14 Homework  Eat Da Burger
 
     Follow the link below to the live site hosted on Heroku. Enter burger names and start devouring!
 
-[Heroku](https://stark-headland-34922.herokuapp.com/)
-[GitHub](https://github.com/Nappyloc/burger)
+[Heroku Live Site](https://stark-headland-34922.herokuapp.com/)
+[GitHub Repository](https://github.com/Nappyloc/burger)
